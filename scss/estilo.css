@@ -1,0 +1,347 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: auto;
+  height: 75px;
+  /*background-color: aqua;*/
+}
+
+/*BUSCAR INDEX Z PARA FIX DEL NAV Y BUSCADOR*/
+
+header .logo-ada {
+  background-color: #081c24;
+  width: 95px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .logo-ada img {
+  width: 35px;
+  height: 40px;
+}
+
+header .buscador {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.fas.fa-search, .far.fa-star, .fas.fa-arrow-up, .far.fa-calendar-alt, .far.fa-play-circle {
+  color: rgba(8, 8, 8, 0.5);
+}
+
+header .buscador input {
+  margin-left: 5%;
+  border: none;
+  height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+.contenido {
+  display: flex;
+}
+
+nav {
+  margin-top: 0;
+  width: 7.5%;
+  /*95px en realidad, ver por que no funciona*/
+  height: auto;
+  /*background-color: aquamarine;*/
+}
+
+/*ON MOUSE OVER PARA LA MANITO*/
+/*ON CLICK PARA EL FETCH*/
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  border-bottom: rgba(228, 230, 231, 0.5) solid 1px;
+}
+
+nav ul li p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6em;
+  font-weight: lighter;
+  color: rgba(8, 8, 8, 0.5);
+}
+
+section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imagen-ppal {
+  width: 100%;
+  height: 380px;
+  background-image: url(https://lifestylehealinginstitute.com/wp-content/uploads/2017/09/et.jpg);
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Major Mono Display", monospace;
+  font-weight: bolder;
+  color: white;
+}
+
+.popular-movies {
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-movies .superior {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ver-mas {
+  margin-right: 5%;
+  border: none;
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7em;
+  color: rgba(8, 8, 8, 0.5);
+}
+
+.titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: lighter;
+  margin-left: 5%;
+  margin-top: 2.5%;
+}
+
+.pelis img {
+  width: 100%;
+  height: 90%;
+}
+
+ul.pelis {
+  width: 90%;
+  height: auto;
+  padding: 0;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.popular-movies ul.pelis li {
+  width: 17%;
+  height: 25%;
+  list-style: none;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  color: rgba(8, 8, 8, 0.5);
+  font-size: 0.9em;
+}
+
+.search {
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0;
+}
+
+.search .superior {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search ul.pelis li {
+  width: 17%;
+  height: 25%;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  color: rgba(8, 8, 8, 0.5);
+  font-size: 0.9em;
+}
+
+.search ul.pelis {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boton-cargar {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+.load-more {
+  border: 1px solid black;
+  background-color: #fafafa;
+  padding: 0.8%;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+
+#modal-wraper {
+  width: 100%;
+  height: 120vh;
+  background-color: rgba(8,28,36,.98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-none {
+  display: none !important;
+}
+
+#modal-contenedor {
+  width: 60%;
+  height: 90%;
+  margin-top: 10px;
+  background-image: url(https://vanyaland.com/wp-content/uploads/2018/09/captain-marvel-poster.jpg);
+  background-color: #fafafa;
+  background-size: 100% 53%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+}
+
+#modal-contenedor::after {
+  content: ""; /*::before and ::after both require content*/
+  position: absolute;
+  /*top: 0;
+  left: 0;*/
+  width: 60%;
+  height: 57%;
+  background-color: rgba(8,28,36,.98);
+  display: flex;
+  opacity: .85;
+  z-index: 1;
+}
+
+#modal-contenedor > * {
+  z-index: 100;
+}
+
+#img-bg {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+
+#img-bg img {
+  width: 100%;
+  height: auto;
+}
+
+#modal-contenedor .izquierda {
+  width: 50%;
+  height: 100vh;
+  /*background-color: blueviolet;*/
+  text-align: center;
+}
+
+.izquierda img {
+  margin-top: 40px;
+  width: 75%;
+  height: auto;
+}
+
+#modal-contenedor .derecha {
+  width: 50%;
+  height: 100vh;
+  /*background-color: violet;*/
+  display: flex;
+  flex-direction: column;
+}
+
+#boton-cierre {
+  align-self: flex-end;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  font-weight: lighter;
+  color: white;
+}
+
+#modal-contenedor .derecha .top {
+  width: 100%;
+  height: 50%;
+  /*background-color: greenyellow;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.titulo-modal {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  color: white;
+}
+
+.slogan {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: darkgrey;
+}
+
+#modal-contenedor .derecha .bottom {
+  margin-top: 50px;
+  width: 95%;
+  height: 50%;
+  /*background-color: pink;*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.descripcion {
+  margin: 0;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  color: dimgray;
+}
+
+.titulos-desc {
+  margin: 0;
+  margin-top: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.95em;
+  color: #081c24;
+}
+
+/*# sourceMappingURL=estilo.css.map */

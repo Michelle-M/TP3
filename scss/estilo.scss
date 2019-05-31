@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    width: auto;
+    height: 75px;
+    /*background-color: aqua;*/
+    
+}
+
+header .logo-ada {
+    background-color: #081c24;
+    width: 95px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo-ada img {
+    width: 35px;
+    height: 40px;
+}
+
+header .buscador {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.fas.fa-search, .far.fa-star, .fas.fa-arrow-up, .far.fa-calendar-alt, .far.fa-play-circle, .fas.fa-long-arrow-alt-right {
+    color: rgba(8, 8, 8, 0.5);
+}
+
+header .buscador input {
+    margin-left: 5%;
+    border: none;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.contenido {
+    display: flex;
+}
+
+nav {
+    margin-top: 0;
+    width: 102px; /*95px en realidad, ver por que no funciona*/
+    height: auto;
+    /*background-color: aquamarine;*/
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 94px;
+    border-bottom: rgba(228, 230, 231, 0.5) solid 1px; 
+}
+
+nav ul li p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.6em;
+    font-weight: lighter;
+    color: rgba(8, 8, 8, 0.5);
+}
+
+section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagen-ppal {
+    width: 100%;
+    height: 380px;
+    background-image: url(https://lifestylehealinginstitute.com/wp-content/uploads/2017/09/et.jpg);
+    background-blend-mode: overlay;
+    background-color:rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bolder;
+    color: white;
+}
+
+.popular-movies {
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-movies .superior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ver-mas {
+    margin-right: 5%;
+    border: none;
+    background-color: #fafafa;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.7em;
+    color: rgba(8, 8, 8, 0.5);
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-left: 5%;
+    margin-top: 2.5%;
+}
+
+.pelis img {
+    width: 190px;
+    height: 270px;
+}
+
+ul.pelis {
+    width: 90%;
+    height: auto;
+    padding: 0;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.popular-movies ul.pelis li {
+    width: 190px;
+    height: 320px;
+    list-style: none;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(8, 8, 8, 0.5);
+    font-size: 0.9em;
+}
+
+.search {
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .search .superior {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .search ul.pelis li {
+    width: 190px;
+    height: 320px;
+    list-style: none;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    color: rgba(8, 8, 8, 0.5);
+    font-size: 0.9em;
+}
+  
+//RELACIONAR EN TERMINAL CADA VEZ QUE HAGO MODIFICACIONES
+//sass --watch --trace scss/estilo.scss:scss/estilo.css
+
+//USAR PORCENTAJES EN VEZ DE PX PARA AJUSTARSE A DISTINTAS PANTALLAS
+
